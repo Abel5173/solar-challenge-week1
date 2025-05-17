@@ -58,8 +58,7 @@ This repository contains data analysis workflows and scripts for exploring and c
 
    ```sh
    python3 -m venv .venv
-   source .venv/bin/activate  # macOS/Linux
-   # .venv\Scripts\activate    # Windows
+   source .venv/bin/activate  
    ```
 
 3. **Install dependencies:**
@@ -77,35 +76,8 @@ This repository contains data analysis workflows and scripts for exploring and c
    ```
 2. Open and run the notebooks in the `notebooks/` directory (e.g., `benin_eda.ipynb`).
 
-### Running Tests
-
-If/when tests are implemented in `tests/`:
-
-```sh
-pytest tests/
-```
-
-### Running CI Locally
-
-You can check code style and run tests locally:
-
-```sh
-flake8 .
-pytest
-```
-
-## Contribution Guidelines
-
-- Use feature branches for new work.
-- Write clear commit messages.
-- Refactor repeated notebook code into functions or classes in `src/` for reusability.
-- Add or update tests in `tests/` for new code.
-- Ensure all code passes CI before submitting a Pull Request.
-
-## License
+-----
 
 This project is for educational purposes.
 
----
 
-For questions or suggestions, please open an issue or contact the maintainer.
