@@ -55,7 +55,7 @@ st.markdown("""
 
 st.title("⚡ Solar Resource Dashboard")
 
-# Sidebar with interactive widgets
+
 countries = ["Benin", "SierraLeone", "Togo"]
 selected_countries = st.sidebar.multiselect(
     "Select countries", countries, default=countries, key="country_select"
@@ -68,19 +68,16 @@ ghi_range = st.sidebar.slider(
 def load_and_filter_data(selected_countries, ghi_range):
     """Loads and filters data, now with caching."""
     df = load_data(selected_countries)
-    if not df.empty:  # Check if df is empty
+    if not df.empty:  
         df = df[(df["GHI"] >= ghi_range[0]) & (df["GHI"] <= ghi_range[1])]
     return df
 
-
-# Show a loading message while data is being processed
 with st.spinner("Loading and filtering data..."):
     df = load_and_filter_data(selected_countries, ghi_range)
 
-# ---  Metric Cards  ---
+
 st.subheader("Key Metrics")
 if df.empty:
-    # Show warning
     st.warning("No data available for the selected countries and GHI range.")
 else:
     col1, col2, col3 = st.columns(3)
@@ -96,12 +93,10 @@ else:
                 delta_color="off"
             )
 
-    # --- Plot Section ---
     st.subheader("GHI Distribution by Country")
     st.markdown(
         "<div class='glass'>"
-        "<b>Boxplot:</b> Visualize the spread and central tendency of GHI for each selected country. "
-        "Use the sidebar to filter by country and GHI range.",
+        "<b>Boxplot:</b> Visualizing the spread and central tendency of GHI for each selected country.",
         unsafe_allow_html=True
     )
     plot_ghi_boxplot(df)

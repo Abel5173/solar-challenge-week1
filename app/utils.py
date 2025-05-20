@@ -27,15 +27,15 @@ def plot_ghi_boxplot(df, toggle=False):
         df,
         x="Country",
         y="GHI",
-        color="Country",  # Assign colors based on the 'Country' column
+        color="Country",  
         color_discrete_sequence=[
-            "rgba(54, 162, 235, 0.8)",  # Blue
-            "rgba(255, 206, 86, 0.8)",  # Yellow
-            "rgba(255, 99, 132, 0.8)",  # Red
-            "rgba(75, 192, 192, 0.8)",  # Green
-            "rgba(153, 102, 255, 0.8)",  # Purple
-        ],  # Custom color gradient
-        labels={"GHI": "GHI (W/m²)"},  # More informative y-axis label
+            "rgba(54, 162, 235, 0.8)",
+            "rgba(255, 206, 86, 0.8)",
+            "rgba(255, 99, 132, 0.8)",
+            "rgba(75, 192, 192, 0.8)",
+            "rgba(153, 102, 255, 0.8)",
+        ], 
+        labels={"GHI": "GHI (W/m²)"},  
         title="GHI Distribution by Country",
     )
     fig.update_layout(
