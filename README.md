@@ -134,20 +134,3 @@ jupyter notebook
 [GitHub](https://github.com/your-username) | 10x Academy Student
 
 ---
-
-## 📜 License
-
-This project is part of the 10x Academy Solar Challenge and is open for educational use.
-
----
-
-## 📌 TODOs
-
-- [ ] Refactor codebase using OOP (`DataProcessor`, `Visualizer`)
-- [ ] Add bar charts/rankings in `compare_countries.ipynb`
-- [ ] Improve statistical summaries
-- [ ] Expand dashboard interactivity and visual appeal
-
----
-
-_Let’s harness the power of solar data for a brighter, data-driven future!_
